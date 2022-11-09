@@ -6,25 +6,25 @@
   <h1 class="mt-2">{{ funcionario.nome}}</h1>
   <dl>
     <dt>ID</dt>
-    <dd>1</dd>
+    <dd>{{ funcionario.id}}</dd>
 
     <dt>Nome</dt>
-    <dd>Jhon Doe</dd>
+    <dd>{{ funcionario.nome }}</dd>
 
     <dt>Telefone</dt>
-    <dd>48 9 9999-9999</dd>
+    <dd>{{ funcionario.telefone }}</dd>
 
     <dt>Email</dt>
-    <dd>jhon@email.com</dd>
+    <dd>{{ funcionario.email }}</dd>
 
     <dt>Salario</dt>
-    <dd>1350.00</dd>
+    <dd>{{ funcionario.salario }}</dd>
 
     <dt>Data contratação</dt>
-    <dd>8 de junho de 20015</dd>
+    <dd>{{ funcionario.data_contratacao }}</dd>
 
     <dt>Departamento</dt>
-    <dd>Produção</dd>
+    <dd>{{ funcionario.departamento }}</dd>
   </dl>
-  <a class="btn-sm btn-primary text-decoration-none" href="#" role="button">Voltar</a>
+  <a class="btn-sm btn-primary text-decoration-none" href="{% url 'funcionario_list' %}" role="button">Voltar</a>
 {% endblock content %}

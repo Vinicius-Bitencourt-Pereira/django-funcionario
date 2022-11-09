@@ -23,7 +23,7 @@
     {% for funcionario in funcionarios %}
     <tr>
         <td>
-          <a href="#">{{ funcionario.nome }}</a>
+          <a href="{% url 'funcionario_detail' funcionario.pk %}">{{ funcionario.nome }}</a>
           </td>
           <td>{{ funcionario.telefone }}</td>
           <td>{{ funcionario.email }}</td>
