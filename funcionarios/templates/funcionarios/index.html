@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}HOME{% endblock title %}
+
+{% block content %}
+<div class="mb-1">
+    <a class="btn-sm btn-outline-success text-decoration-none" href="{% url 'funcionario_create' %}" role="button">+ Adicionar novo funcionário</a>
+</div>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Salário</th>
+        <th>Data Contratação</th>
+        <th>Departamento</th>
+        <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="#">Jhon Doe</a>
+        </td>
+        <td>48 9 9999-9999</td>
+        <td>jhon@email.com</td>
+        <td>1350.00</td>
+        <td>8 de junho de 20015</td>
+        <td>Produçao</td>
+        <td>
+            <a class="btn-sm btn-info text-decoration-none" href="#" role="button">Editar</a>
+            <a class="btn-sm btn-danger text-decoration-none" href="#" role="button">Excluir</a>
+        </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ funcionario.nome}}{% endblock title %}
+
+{% block content %}
+  <h1 class="mt-2">{{ funcionario.nome}}</h1>
+  <dl>
+    <dt>ID</dt>
+    <dd>1</dd>
+
+    <dt>Nome</dt>
+    <dd>Jhon Doe</dd>
+
+    <dt>Telefone</dt>
+    <dd>48 9 9999-9999</dd>
+
+    <dt>Email</dt>
+    <dd>jhon@email.com</dd>
+
+    <dt>Salario</dt>
+    <dd>1350.00</dd>
+
+    <dt>Data contratação</dt>
+    <dd>8 de junho de 20015</dd>
+
+    <dt>Departamento</dt>
+    <dd>Produção</dd>
+  </dl>
+  <a class="btn-sm btn-primary text-decoration-none" href="#" role="button">Voltar</a>
+{% endblock content %}
