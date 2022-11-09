@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="mb-1">
-    <a class="btn-sm btn-outline-success text-decoration-none" href="{% url 'funcionario_create' %}" role="button">+ Adicionar novo funcionário</a>
+    <a class="btn-sm btn-outline-success text-decoration-none" href="#" role="button">+ Adicionar novo funcionário</a>
 </div>
 <br>
 <table class="table">
@@ -20,20 +20,22 @@
     </tr>
   </thead>
   <tbody>
+    {% for funcionario in funcionarios %}
     <tr>
-      <td>
-        <a href="#">Jhon Doe</a>
-        </td>
-        <td>48 9 9999-9999</td>
-        <td>jhon@email.com</td>
-        <td>1350.00</td>
-        <td>8 de junho de 20015</td>
-        <td>Produçao</td>
         <td>
-            <a class="btn-sm btn-info text-decoration-none" href="#" role="button">Editar</a>
-            <a class="btn-sm btn-danger text-decoration-none" href="#" role="button">Excluir</a>
-        </td>
-    </tr>
+          <a href="#">{{ funcionario.nome }}</a>
+          </td>
+          <td>{{ funcionario.telefone }}</td>
+          <td>{{ funcionario.email }}</td>
+          <td>{{ funcionario.salario }}</td>
+          <td>{{ funcionario.data_contratacao }}</td>
+          <td>{{ funcionario.departamento }}</td>
+          <td>
+              <a class="btn-sm btn-info text-decoration-none" href="#" role="button">Editar</a>
+              <a class="btn-sm btn-danger text-decoration-none" href="#" role="button">Excluir</a>
+          </td>
+      </tr>
+    {% endfor %}
   </tbody>
 </table>
 {% endblock content %}
