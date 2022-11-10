@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # Local
     'funcionarios.apps.FuncionariosConfig',
+
+    # Terceiros
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
