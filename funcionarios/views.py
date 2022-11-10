@@ -3,6 +3,7 @@ from django.views.generic import (
     DetailView,
     CreateView,
     UpdateView,
+    DeleteView
 )
 
 from django.urls import reverse_lazy
@@ -39,3 +40,9 @@ class FuncionarioUpdateView(UpdateView):
     fields = '__all__'
     success_url = reverse_lazy('funcionario_list')
     
+
+class FuncionarioDeleteView(DeleteView):
+    model = Funcionario
+    context_object_name = 'funcionario'
+    template_name = 'funcionarios/delete.html'
+    success_url = reverse_lazy('funcionario_list')

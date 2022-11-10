@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <p>Deseja realmente excluir <a href="{% url 'funcionario_detail' funcionario.pk %}">{{ funcionario }}</a>?</p>
+        {% buttons %}
+            <button type="submit" class="btn btn-danger">Excluir</button>
+            <a class="btn btn-primary text-decoration-none" href="{% url 'funcionario_list' %}" role="button">Voltar</a>
+        {% endbuttons %}
+    </form>
+{% endblock content %}
