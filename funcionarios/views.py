@@ -2,6 +2,7 @@ from django.views.generic import (
     ListView,
     DetailView,
     CreateView,
+    UpdateView,
 )
 
 from django.urls import reverse_lazy
@@ -28,5 +29,13 @@ class FuncionarioDetailView(DetailView):
 class FuncionarioCreateView(CreateView):
     model = Funcionario
     template_name = 'funcionarios/form.html'
-    form_class = FuncionarioModelForm
+    fields = '__all__'
     success_url = reverse_lazy('funcionario_list')
+
+
+class FuncionarioUpdateView(UpdateView):
+    model = Funcionario
+    template_name = 'funcionarios/form.html'
+    fields = '__all__'
+    success_url = reverse_lazy('funcionario_list')
+    
